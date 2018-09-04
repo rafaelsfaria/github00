@@ -58,7 +58,6 @@ printFeatures(data, plotfeatures, "Without outlier")
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
 my_dataset = data_dict
-# new features taken form lordzuko
 new_features = {'fraction_from_poi_email': ('from_poi_to_this_person', 'to_messages'),
                 'fraction_to_poi_email': ('from_this_person_to_poi', 'from_messages')}
 
