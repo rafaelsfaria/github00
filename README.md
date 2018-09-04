@@ -2,5 +2,5 @@
 ### *Python*
 ### ud120 final project:
 Libraries needed: numpy, sklearn, matplotlib.
-
-Enron dataset available at [this link](http://www.cs.cmu.edu/~./enron/)
+Original files at [udacity's github](https://github.com/udacity/ud120-projects).
+Enron dataset available at [this link](http://www.cs.cmu.edu/~./enron/).
