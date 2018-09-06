@@ -11,6 +11,6 @@ People of interest are people that:
 2. settled without admitting guilt
 3. testified in exchange for immunity from prosecution
 
-You can see the dataset is in [this file](enron61702insiderpay.pdf). The rows represents the people and the columns are the features.
+You can see the dataset in [this file](enron61702insiderpay.pdf). The rows represents the people and the columns are the features.
 Basically, the classifier has to tell if the person is a person of interest or not.
 The goal is that the model gives [precision](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html) and [recall](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html) above .33.
