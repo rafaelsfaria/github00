@@ -50,7 +50,6 @@ printFeatures(data, plotfeatures, "With outlier")
 # "TOTAL" is not a person. This row isn't needed
 data_dict.pop("TOTAL", 0)
 data_dict.pop("THE TRAVEL AGENCY IN THE PARK", 0)
-data_dict.pop("LOCKHART EUGENE E", 0)
 data = featureFormat(data_dict, features=plotfeatures)
 printFeatures(data, plotfeatures, "Without outlier")
 
@@ -137,7 +136,7 @@ classifiers.append(clf_rf)
 
 # adaboostclassifier, default base estimator: DecisionTreeClassifier
 print('adaboost meta classifier')
-clf_ada = AdaBoostClassifier()
+clf_ada = AdaBoostClassifier(n_estimators=80)
 classifiers.append(clf_ada)
 
 # support vector classification -- 0 precision
@@ -164,7 +163,7 @@ from sklearn.decomposition import PCA
 # decision tree classifier grid search
 print('\n\ndecision tree grid search')
 param_grid_dt = {
-        'min_samples_split' : [10,20,30,40],
+        'min_samples_split' : [2,3,4,5,6],
         'splitter' : ['best', 'random'],
         'random_state' : [42],
         }
@@ -176,26 +175,14 @@ classifiers.append(clf_dtg.best_estimator_)
 # random forest grid search -- takes too long
 print('random forest grid search')
 param_grid_rf = {
-        'min_samples_split' : [30, 40],
-        'n_estimators' : [10, 20],
+        'min_samples_split' : [2,3,4,5,6],
+        'n_estimators' : [60, 80],
         'random_state' : [42],
         }
 
 clf_rfg = GridSearchCV(RandomForestClassifier(),param_grid_rf)
 clf_rfg = clf_rfg.fit(features_train, labels_train)
 classifiers.append(clf_rfg.best_estimator_)
-
-# support vector classifier grid search - takes too long
-#print('svc grid search')
-#param_grid_svc = {
-#        'C': [1e3, 5e3, 1e4, 5e4, 1e5],
-#        'kernel': ['linear','rbf'],
-#        'gamma': [0.001, 0.005, 0.01, 0.1],
-#        }
-#
-#clf_svcg = GridSearchCV(SVC(),param_grid_svc)
-#clf_svcg = clf_svcg.fit(features_train, labels_train)
-#classifiers.append(clf_svcg.best_estimator_)
 
 # support vector classifier with scaling and dimension reduction
 print('svc with scaling and dimension reduction')
@@ -238,7 +225,7 @@ clf_names = ['GaussianNB', 'DecisionTree', 'Random Forest', 'Adaboost - DT', \
              'SVC', 'DT - GridSearch', 'RF - GridSearch', 'SVC - PCA', \
              'SVC - PCA, GridSearch']
 result_dict = defaultdict(list)
-count = 0
+count = 1
 
 for clf in classifiers:
     print('Dumping classifier', count)
@@ -255,3 +242,5 @@ for row in result_list:
         i += 1
 
 print(pd.DataFrame(result_dict,clf_names))
+print(clf_nb)
+print(clf_pipsvc.best_estimator_)
