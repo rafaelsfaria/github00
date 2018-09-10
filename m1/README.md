@@ -7,4 +7,4 @@ It uses git version control.
 
 This project was not submitted for evaluation.
 
-*Original files*: [this link](https://github.com/afosdick/ese-coursera-course1.git).
+*Original files*: [here](https://github.com/afosdick/ese-coursera-course1.git).
