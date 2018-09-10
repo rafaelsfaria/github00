@@ -11,5 +11,5 @@ Enron dataset available at [link](http://www.cs.cmu.edu/~./enron/).
 ### embedded programming ([coursera](https://www.coursera.org/learn/introduction-embedded-systems)) - m1 (lesson 1 week 1):
 All libraries are provided.
 
-Original file at: [Introduction to Embedded Systems Software](https://github.com/afosdick/ese-coursera-course1)
+Original files at: [link](https://github.com/afosdick/ese-coursera-course1)
 
