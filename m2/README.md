@@ -15,16 +15,16 @@ Generate assembly output of all c source files. Example: make main.asm
 %.o
 Generate object file for all c source files (but no linking). Example: make PLATFORM=MSP432 main.o
 
-compile-all
+*compile-all*
 
 Compile all object files. Example: make compile-all
 
-build
+*build*
 
 Compile all object files into final executable. Example: make build
 
 A .map file and a .asm disassembled file are generated from the output executable. Example: objdump -S c1m2.out > c1m2.asm
 
-clean
+*clean*
 
 Clean all generated files.
