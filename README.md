@@ -15,3 +15,6 @@ Original files at: [link](https://github.com/afosdick/ese-coursera-course1)
 
 ### embedded C - m2 - Makefile
 All libraries are provided.
+
+If the OS is Windows, download [MinGW](https://sourceforge.net/projects/mingw/) and install gcc.
+Also download [GNU arm embedded toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
