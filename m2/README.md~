@@ -25,6 +25,6 @@ Compile all object files into final executable. Example: make build
 
 A .map file and a .asm disassembled file are generated from the output executable. Example: objdump -S c1m2.out > c1m2.asm
 
-clean
+*clean*
 
 Clean all generated files.

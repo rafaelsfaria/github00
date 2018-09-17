@@ -6,13 +6,13 @@ PLATFORM=HOST (implicit) or PLATFORM=MSP432
 
 *Build targets*
 
-%.i
+%.i - 
 Generate preprocessed output of all c source files. Example: make memory.i
 
-%.asm
+%.asm - 
 Generate assembly output of all c source files. Example: make main.asm
 
-%.o
+%.o - 
 Generate object file for all c source files (but no linking). Example: make PLATFORM=MSP432 main.o
 
 *compile-all*
