@@ -24,7 +24,7 @@
 # Platform Overrides:
 #     PLATFORM - MSP432 or HOST 
 #    
-#
+# Author - Rafael Faria
 #------------------------------------------------------------------------------
 include sources.mk
 

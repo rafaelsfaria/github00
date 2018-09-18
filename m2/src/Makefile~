@@ -59,7 +59,7 @@ else
 endif
 
 # Dependency flags
-DFLAGS = -MMD 
+DFLAGS = -MM -MP 
 
 # Object dump
 OBJD = objdump
